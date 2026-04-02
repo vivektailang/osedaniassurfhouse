@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Now | Oseda Nias Surfhouse</title>
+  <meta name="description" content="Book your surf stay at Oseda Nias Surfhouse via WhatsApp with a direct inquiry form.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="wave-bg" aria-hidden="true"></div>
+  <header class="header">
+    <div class="container nav-shell glass">
+      <a href="index.html" class="brand"><i class="fa-solid fa-water"></i><span>Oseda Nias Surfhouse</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+      <nav class="nav" id="siteNav">
+        <a href="index.html"><i class="fa-solid fa-house"></i> <span data-i18n="nav.home">Home</span></a>
+        <a href="about.html"><i class="fa-solid fa-circle-info"></i> <span data-i18n="nav.about">About</span></a>
+        <a href="rooms.html"><i class="fa-solid fa-bed"></i> <span data-i18n="nav.rooms">Rooms</span></a>
+        <a href="gallery.html"><i class="fa-solid fa-images"></i> <span data-i18n="nav.gallery">Gallery</span></a>
+        <a href="reviews.html"><i class="fa-solid fa-star"></i> <span data-i18n="nav.reviews">Reviews</span></a>
+        <a href="location.html"><i class="fa-solid fa-location-dot"></i> <span data-i18n="nav.location">Location</span></a>
+        <a href="booking.html"><i class="fa-solid fa-calendar-check"></i> <span data-i18n="nav.booking">Booking</span></a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="Language switch">
+        <button type="button" class="lang-btn is-active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="id">ID</button>
+      </div>
+      <a class="btn btn-whatsapp desktop-cta" href="https://wa.me/6281234567890?text=Hi%20Oseda%20Nias%20Surfhouse%2C%20I%20want%20to%20book%20my%20stay" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i><span data-i18n="cta.bookNow">Book Now</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section page-hero">
+      <div class="container panel reveal">
+        <h1><i class="fa-solid fa-calendar-check"></i> Booking Inquiry</h1>
+        <p>Send your booking details and continue instantly via WhatsApp for fast confirmation.</p>
+      </div>
+    </section>
+
+    <section class="booking section" id="booking">
+      <div class="container split booking-layout">
+        <div class="panel reveal">
+          <form id="bookingForm" class="booking-form" novalidate>
+            <div class="field-grid">
+              <label>
+                <span data-i18n="booking.name">Full Name</span>
+                <input type="text" name="fullName" data-i18n-placeholder="booking.namePlaceholder" placeholder="Your full name" required>
+              </label>
+              <label>
+                <span data-i18n="booking.email">Email</span>
+                <input type="email" name="email" data-i18n-placeholder="booking.emailPlaceholder" placeholder="you@example.com" required>
+              </label>
+            </div>
+            <div class="field-grid">
+              <label>
+                <span data-i18n="booking.checkin">Check-In Date</span>
+                <input type="date" name="checkin" required>
+              </label>
+              <label>
+                <span data-i18n="booking.checkout">Check-Out Date</span>
+                <input type="date" name="checkout" required>
+              </label>
+            </div>
+            <div class="field-grid">
+              <label>
+                <span data-i18n="booking.guests">Guests</span>
+                <input type="number" name="guests" min="1" max="12" value="2" required>
+              </label>
+              <label>
+                <span data-i18n="booking.roomType">Preferred Room</span>
+                <select name="roomType" required>
+                  <option value="Ocean View Room" data-i18n="booking.room1">Ocean View Room</option>
+                  <option value="Deluxe Tropical Suite" data-i18n="booking.room2">Deluxe Tropical Suite</option>
+                  <option value="Surfer Shared Loft" data-i18n="booking.room3">Surfer Shared Loft</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              <span data-i18n="booking.notes">Special Notes</span>
+              <textarea name="notes" rows="4" data-i18n-placeholder="booking.notesPlaceholder" placeholder="Arrival time, airport transfer, or other requests"></textarea>
+            </label>
+            <label class="consent">
+              <input type="checkbox" name="consent" required>
+              <span data-i18n="booking.consent">I agree to be contacted by WhatsApp regarding this booking inquiry.</span>
+            </label>
+            <button type="submit" class="btn btn-whatsapp btn-large">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span data-i18n="booking.submit">Send Inquiry via WhatsApp</span>
+            </button>
+            <p id="bookingStatus" class="booking-status" aria-live="polite"></p>
+          </form>
+        </div>
+        <div class="panel reveal booking-benefits">
+          <h3><i class="fa-solid fa-shield-heart"></i> <span data-i18n="booking.benefitsTitle">Why Book Direct?</span></h3>
+          <ul>
+            <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="booking.b1">Best direct rates</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="booking.b2">Fast room confirmation</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="booking.b3">Flexible arrival coordination</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="booking.b4">Surf trip support from local team</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta section">
+      <div class="container cta-box glass reveal">
+        <h2><i class="fa-solid fa-paper-plane"></i> <span data-i18n="cta.title">Ready to Book Your Surf Escape?</span></h2>
+        <p data-i18n="cta.subtitle">Message us now for room availability, rates, and special long-stay offers.</p>
+        <a class="btn btn-whatsapp btn-large" href="https://wa.me/6281234567890?text=Hi%20Oseda%20Nias%20Surfhouse%2C%20I%20want%20to%20book%20my%20surf%20stay" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span data-i18n="cta.bookNowWhatsapp">Book Now via WhatsApp</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <p><i class="fa-solid fa-water"></i> Oseda Nias Surfhouse</p>
+      <p><i class="fa-solid fa-envelope"></i> hello@osedaniassurfhouse.com</p>
+      <p><i class="fa-solid fa-phone"></i> +62 812-3456-7890</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
